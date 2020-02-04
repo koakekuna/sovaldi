@@ -1,0 +1,15 @@
+#site-branding {
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem-calc(10);
+  }
+
+  img {
+    width: 200px;
+    height: auto;
+  }
+
+}

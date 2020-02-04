@@ -1,0 +1,49 @@
+// Menu Dropdown
+
+@include media-breakpoint-up(lg) {
+  #menu-primary {
+    .menu-item-has-children {
+      position: relative;
+      .dropdown-toggle::after {
+        display: none;
+      }
+       // secondary ul
+       .dropdown-menu {
+        display: block;
+        background: $primary;
+        position: absolute;
+        top: rem-calc(70);
+        transform-origin: top left;
+        transform: scale(0);
+    
+        a {
+          color: $white;
+          transform: translateX(20px);
+          opacity: 0;
+          @include fontSize(20px);
+          &:hover {
+            background: $primary;
+            color: darken($white, 10%);
+          }
+          
+        }
+      }
+      
+      // initial li:hover
+      &:hover {
+        .dropdown-menu {
+          transform: scale(1);
+          transition: 0.2s all ease;
+          @for $i from 1 through 4 {
+            a:nth-child(#{$i}) {
+              transform: translateX(0px);
+              opacity: 1;
+              transition: opacity .2s ease, transform .2s ease;
+              transition-delay: .15s + (.05s * $i);
+            }
+          }
+        }
+      } 
+    }
+  }
+}

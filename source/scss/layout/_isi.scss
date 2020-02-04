@@ -1,0 +1,29 @@
+#sticky-isi {
+  height: 20%;
+  position: fixed;
+  max-width: 1800px;
+  margin: auto;
+  overflow-x: hidden;
+  bottom: 0;
+  background: $white;
+  border-top: rem-calc(4px) solid $primary;
+  transition: 0.4s opacity ease, 0.4s visibility ease;
+  z-index: $zindex-sticky;
+  &.disabled{
+    visibility: hidden;
+    opacity: 0;
+  } 
+}
+
+.isi {
+  padding: rem-calc(40) 0;
+
+  background: $white;
+
+  h3 {
+    color: $primary;
+  }
+  strong {
+    color: $primary;
+  }
+}

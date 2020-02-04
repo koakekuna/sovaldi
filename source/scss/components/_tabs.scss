@@ -1,0 +1,14 @@
+#v-pills-tab {
+  display: flex;
+  flex-direction: column;
+}
+
+#v-pills-tabContent {
+  h3 {
+    color: $primary;
+  }
+
+  h4 {
+    color: lighten($gray-800, 15%);
+  }
+}

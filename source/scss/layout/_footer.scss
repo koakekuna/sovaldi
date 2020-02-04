@@ -1,0 +1,111 @@
+// FOOTER
+
+.footer {
+  background: $black;
+  color: $gray-600;
+  .footer__container {
+    @include make-container-max-widths();
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: rem-calc(20) rem-calc(16);
+    @include media-breakpoint-up(md) {
+      padding: rem-calc(40) rem-calc(30);
+      flex-direction: row;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+    }
+  }
+  .footer-nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      width: 200px;
+    }
+  }
+
+  .footer-nav__links__link,
+  .footer-nav__links .nav-item {
+    padding-bottom: 15px;
+    a {
+      color: $gray-600;
+      text-decoration: none;
+      position: relative;
+      transition: all .25s ease;
+      display: inline;
+      padding: 0;
+      &:hover {
+        color: #ffffff;
+      }
+      &::after {
+        display: block;
+        content: '';
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        transform-origin: center center;
+        transform: scaleX(0);
+        transition: all .25s ease;
+      }
+      &:hover::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .footer__logo {
+    margin: 25px 0;
+    order: 5;
+
+    img {
+      max-width: 180px;
+    }
+    a {
+      display: block;
+    }
+  }
+  .footer-nav--aoi {
+    order: 1;
+    margin-top: 25px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
+  }
+  .footer-nav--info {
+    order: 2;
+    position: relative;
+  }
+  .footer-nav--legal {
+    order: 3;
+    margin-bottom: 25px;
+  }
+  .footer-nav--social {
+    order: 4;
+    margin-bottom: 25px;
+    position: relative;
+    .footer-nav__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .footer-nav__links__link a{ 
+      display: inline-block;
+      padding-top: 24px;
+      overflow: hidden;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 0;
+      }
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
