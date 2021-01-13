@@ -6,7 +6,7 @@
   "dependencies": {
     "cookieconsent": "^3.1.0",
     "intersection-observer": "^0.6.0",
-    "jquery-validation": "^1.19.0"
+    "jquery-validation": "^1.19.3"
   },
   "devDependencies": {
     "bootstrap": "^4.3.1"
